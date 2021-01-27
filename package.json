@@ -1,0 +1,58 @@
+{
+  "name": "douban-api",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bubao/douban-api.git"
+  },
+  "keywords": [
+    "api",
+    "douban"
+  ],
+  "author": "bubao",
+  "engines": {
+    "node": ">=11.14.0"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bubao/douban-api/issues"
+  },
+  "homepage": "https://github.com/bubao/douban-api#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.5",
+    "got": "^11.8.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "commitizen": "^4.2.3",
+    "cz-customizable": "^6.3.0",
+    "eslint": "^7.18.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "husky": "^4.3.8"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "eslint --fix .",
+      "pre-push": "eslint --fix .",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "config/cz-config.js"
+    }
+  },
+  "description": ""
+}
